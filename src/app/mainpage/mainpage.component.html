@@ -1,0 +1,98 @@
+<!-- If submittd is true  -->
+<div *ngIf="submitted; else loggedOut">
+  <h3>Successful.</h3>
+</div> 
+<!-- If submittd is true  -->
+
+<!-- If submittd is false  -->
+<ng-template #loggedOut>
+ 
+  <!-- Form  container start -->   
+  <div class="container">
+    
+    <!-- Header start --> 
+    <div class="row">
+      <div class="col-6 my-3"><h2>Address Information</h2></div>
+      <!-- signout button -->
+      <div class="col-6 d-flex justify-content-end my-3"><button class="btn btn-lg btn-outline-danger" (click)="signOut()">Sign out</button></div>
+    </div>
+    <!-- Header start -->
+
+    <!-- form start -->
+    <div class="Form">
+      <form name="myForm" class="needs-validation">
+        <!-- form number field -->
+        <div class="form-group">
+          <label for="dno">Door No</label>
+          <input type="number" class="form-control" id="uname" placeholder="Enter doornumber" name="dno" required>
+          <div class="valid-feedback">Valid doorno.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <!-- form text field -->
+        <div class="form-group my-3">
+          <label for="sname">Street Name</label>
+          <input type="text" class="form-control" id="sname" placeholder="Enter streetname" name="same" required>
+          <div class="valid-feedback">Valid streetname.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <!-- form text field -->
+        <div class="form-group my-3">
+          <label for="sname">City / Place Name</label>
+          <input type="text" class="form-control" id="cpname" placeholder="Enter city/placename" name="cpname" required>
+          <div class="valid-feedback">Valid city/place.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <!-- form select options -->
+        <div class="form-group my-3">
+          <label for="dist">District</label>
+          <select class="form-select" aria-label="Default select">
+            <option value="1">Coimbatore</option>
+            <option value="2">Bangalore</option>
+            <option value="3">Chennai</option>
+            <option value="4">Hyderabad</option>
+            <option value="4">Cochin</option>
+          </select>
+        </div>
+         <!-- form select options -->
+        <div class="form-group my-3">
+          <label for="dist">State</label>
+          <select class="form-select" aria-label="Default select">
+            <option value="1">Tamil Nadu</option>
+            <option value="2">Karnataka</option>
+            <option value="3">Kerala </option>
+            <option value="4">Andhra Pradesh</option>
+          </select>
+        </div>
+        <!-- form number field -->
+        <div class="form-group my-3">
+          <label for="zcode">Zip Code</label>
+          <input type="number" class="form-control" id="cpname" placeholder="Enter zipcode" name="cpname" required>
+          <div class="valid-feedback">Valid zipcode.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <!-- form check box -->
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember" required> Confirm, I agree to the terms and condition.
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Check this checkbox to continue.</div>
+          </label>
+        </div>
+        <!-- save button -->
+        <div class="d-grid col-2 mx-start my-3">
+          <button type="button" (click)="validate()" class="btn btn-dark btn-lg"> Save </button>
+        </div>
+      </form>
+    </div>
+    <!-- Form end -->
+
+  </div>
+  <!-- Form  container end -->  
+
+</ng-template>
+<!-- If submittd is false  -->
+
+
+
+
+
